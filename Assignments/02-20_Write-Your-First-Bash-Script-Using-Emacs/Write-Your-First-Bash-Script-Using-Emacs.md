@@ -8,17 +8,17 @@ do the associated exercises.
 
 When that is done, complete the assignment below (which combines elementary bash with elementary Emacs usage)
 
-0. Launch `Emacs` from the terminal using the command `emacs -nw` 
+0. Launch `Emacs` from the terminal using the command `emacs -nw` Done[UYA] 
 
-0. Create a new file by hitting C-x C-f (that's short for CTRL-x followed by CTRL-f)
+0. Create a new file by hitting C-x C-f (that's short for CTRL-x followed by CTRL-f) Done[UYA]
 
    * Emacs will pop up a little `minibuffer` at the _bottom_ of the terminal saying `Find file:`
 
    * This is its way of asking you the filename you want to use
 
-   * Give it a filename `First-Bash-Script-[Moniker].sh`
+   * Give it a filename `First-Bash-Script-[Moniker].sh` Done[UYA]
 
-0. As the first line of the script, enter the exact letters `#!/bin/bash`
+0. As the first line of the script, enter the exact letters `#!/bin/bash` Done[UYA]
 
    * This is the magic spell that identifies the file as a bash script file
 
@@ -34,7 +34,7 @@ When that is done, complete the assignment below (which combines elementary bash
 
    * This is done using the `chmod` command (short for `change the modification characteristics of the file`)
 
-   * The specific command you must use is `chmod a+x *.sh`
+   * The specific command you must use is `chmod a+x *.sh`  Done[UYA]
 
    * The `*.sh` syntax means `all files ending in .sh`
 
@@ -42,13 +42,13 @@ When that is done, complete the assignment below (which combines elementary bash
 
    0. Type `/bin/bash First-Bash-Script-[Moniker].sh`
 
-   0. Type `./First-Bash-Script-[Moniker].sh`
+   0. Type `./First-Bash-Script-[Moniker].sh`  Done[UYA]
 
 0. Capture the magnificent results of your efforts in an output file by adding ` > First-Bash-Script-[Moniker].out` after typing one of the above options to execute the .sh file. For example,
 
    `./First-Bash-Script-[Moniker].sh  > First-Bash-Script-[Moniker].out`
 
-0. View the results in two ways:
+0. View the results in two ways:  Done[UYA]
 
    0.  At the shell type `cat *.out`
 
@@ -62,12 +62,12 @@ When that is done, complete the assignment below (which combines elementary bash
 
       * The reason is that your previous invocation of emacs included the `-nw` flag, which is short for `no window` and has the effect of launching emacs inside the shell window
 
-0. Update your local copy of the class "Methods" repository:
+0. Update your local copy of the class "Methods" repository:  Done[UYA]
 
     `cd ~/GitHub/ccarrollATjhuecon/Methods`
     `git pull`
 
 0. Move your script to the /Assignments/[##-##]-Write-Your-First-Bash-Script-Using-Emacs in the
-local copy the "Methods" repo
+local copy the "Methods" repo   Done[UYA]
 
 
