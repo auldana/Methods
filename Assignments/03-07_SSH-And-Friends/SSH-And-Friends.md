@@ -11,22 +11,22 @@ that allow interaction with the remote computer almost as if the user were physi
    * We will therefore illustrate the use of the ssh commend by doing something pretty meta: Connecting via ssh to THE SAME COMPUTER YOU ARE CONNECTING FROM
 0. Steps:
    * Launch a `Terminal` window (and NOT a shell prompt from inside emacs)
-   * Become the root user (superuser) using the `su` command
-      * This requires you to have enabled the root user in your VM; if you have not done this, do so using the command `sudo passwd root` and give the root user the same password as the `econ-ark` user (Google for more info)
+   * Become the root user (superuser) using the `su` command  Done[UYA]
+   * This requires you to have enabled the root user in your VM; if you have not done this, do so using the command `sudo passwd root` and give the root user the same password as the `econ-ark` user (Google for more info)
    * Test whether you have succeeded by using the `whoami` command
       * The answer should be `root`
-   * `ssh econ-ark@localhost` will initiate a `remote` connection from your own computer to itself
+   * `ssh econ-ark@localhost` will initiate a `remote` connection from your own computer to itself  Done[UYA]
 	  * (By default, in unix your own computer can be addressed as `localhost`)
       * If this is the first time you have connected from your current machine to the remote machine, you will asked to permit the connection va a `key fingerprint` which is a security mechanism. Accept this request
    * If instead of `localhost` you specified some other valid username and hostname, you would connect as that user to that machine instead
       * Assuming that the connection is permitted by firewalls and other security mechanisms...
 	  * And that connecting by ssh has been enabled on the other machine
 0. You should now be connected to the remote computer on precisely the same footing you would have if you had logged into the computer from a physical connection like a keyboard
-   * Confirm that you are logged in as the econ-ark user using the `whoami` command
-   * A second proof that you are logged in as the econ-ark user is to use the command `ls`
+   * Confirm that you are logged in as the econ-ark user using the `whoami` command    Done[UYA]
+   * A second proof that you are logged in as the econ-ark user is to use the command `ls`   Done[UYA]
    * You should see the usual default list of folders from your home directory
-0. Exit from your secure shell:
-   * `exit` is the command
+0. Exit from your secure shell:  Done[UYA]
+   * `exit` is the command  
    * `whoami` should now identify you as the `root` user again
    * `exit` from your status as superuser and return to your normal identity
 0. There is no need to become the root user in order to use the secure shell
@@ -40,7 +40,7 @@ Once you have exited back to your original `econ-ark` identity, it is time to le
 
 The syntax for the `scp` command is similar to that of the regular copy command `cp` except that the copying can occur between remote machines.
 
-We are going to again become root for the purpose of executing this command. Below is the sequence of commands you should type at a terminal shell to copy all of the assignments from the Methods class to a new directory `/tmp/Methods/Assignments`:
+We are going to again become root for the purpose of executing this command. Below is the sequence of commands you should type at a terminal shell to copy all of the assignments from the Methods class to a new directory `/tmp/Methods/Assignments`: Done after fixing the dir name[UYA]
 
     su # to become the root user -- you will have to give the password
 	mkdir -p /tmp/Methods/Assignments # to create the directory into which the files will be copied
@@ -55,7 +55,7 @@ If you will be connecting regularly from your computer to online resources using
 
 The default location for such a key is the `~/.ssh/` directory. The default kind of key is an RSA key, which has two parts, a `private` part named `~/.ssh/id_rsa` and a `public` part named `~/.ssh/id_rsa.pub`.  
 
-If such keys do not exist already, you can generate them with a shell command like:
+If such keys do not exist already, you can generate them with a shell command like:   Done[UYA]
 
 	ssh-keygen -t rsa -b 4096 -C "econ-ark VM of [Moniker]" # This is a "Comment" that lets you identify the key
 
@@ -104,14 +104,14 @@ On Win or Mac machines, it is possible to configure the credential helper so tha
 
 On Linux machines, the credential helper tool is more limited: As with the timeout on the sudo command, there is an 'expiration date' (defaulting to 3600 seconds) after which you will be required to reenter username and password.
 
-To set up the credential helper, from a shell:
+To set up the credential helper, from a shell:   Done[UYA]
 
    `git config --global credential.helper cache`
    `git config --global credential.helper 'cache --timeout=3600'`
 
 ## Mount A Network Drive
 
-The `sshfs` tool allows you to securely mount a directory or drive on the remote machine in such a way that, while mounted, it becomes part of the filesystem of the host machine.
+The `sshfs` tool allows you to securely mount a directory or drive on the remote machine in such a way that, while mounted, it becomes part of the filesystem of the host machine.  b[UYA]
 
 	sudo apt -y install sshfs # It is probably already installed
 	sudo mkdir -p /mnt/Methods # Make the 'mount point' where the new content will be accessible
