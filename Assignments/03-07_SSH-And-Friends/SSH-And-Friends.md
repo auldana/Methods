@@ -111,7 +111,7 @@ To set up the credential helper, from a shell:   Done[UYA]
 
 ## Mount A Network Drive
 
-The `sshfs` tool allows you to securely mount a directory or drive on the remote machine in such a way that, while mounted, it becomes part of the filesystem of the host machine.  b[UYA]
+The `sshfs` tool allows you to securely mount a directory or drive on the remote machine in such a way that, while mounted, it becomes part of the filesystem of the host machine.  Done[UYA]
 
 	sudo apt -y install sshfs # It is probably already installed
 	sudo mkdir -p /mnt/Methods # Make the 'mount point' where the new content will be accessible
